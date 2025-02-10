@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="fried-chicken-restaurant-logo-template-vector-removebg-preview.png">
+    <link rel="stylesheet" href="Login.css">
+    
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="backbox">
+          <div class="loginMsg">
+            <div class="textcontent">
+              <p class="title">Don't have an account?</p>
+              <p>Sign up to save all your graph.</p>
+              <button id="switch1">Sign Up</button>
+            </div>
+          </div>
+          <div class="signupMsg visibility">
+            <div class="textcontent">
+              <p class="title">Have an account?</p>
+              <p>Log in to see all your collection.</p>
+              <button id="switch2">LOG IN</button>
+            </div>
+          </div>
+        </div>
+        <!-- backbox -->
+    
+        <div class="frontbox">
+          <div class="login">
+            <h2>LOG IN</h2>
+            <div class="inputbox">
+              <input type="text" name="email" placeholder="  EMAIL">
+              <input type="password" name="password" placeholder="  PASSWORD">
+            </div>
+            <p>FORGET PASSWORD?</p>
+            <button>LOG IN</button>
+          </div>
+    
+          <div class="signup hide">
+            <h2>SIGN UP</h2>
+            <div class="inputbox">
+              <input type="text" name="fullname" placeholder="  FULLNAME">
+              <input type="text" name="email" placeholder="  EMAIL">
+              <input type="password" name="password" placeholder="  PASSWORD">
+            </div>
+            <button>SIGN UP</button>
+          </div>
+    
+        </div>
+        <!-- frontbox -->
+      </div>
+      
+
+      <script>
+       // Select elements
+var loginMsg = document.querySelector('.loginMsg'),
+    login = document.querySelector('.login'),
+    signupMsg = document.querySelector('.signupMsg'),
+    signup = document.querySelector('.signup'),
+    frontbox = document.querySelector('.frontbox');
+
+// Function to toggle visibility and classes
+function toggleVisibilityAndClasses() {
+  loginMsg.classList.toggle('visibility');
+  signupMsg.classList.toggle('visibility');
+  login.classList.toggle('hide');
+  signup.classList.toggle('hide');
+}
+
+// Function to add/remove classes for the frontbox and forms
+function switchToLoginForm() {
+  frontbox.classList.add('moving');
+  toggleVisibilityAndClasses();
+}
+
+function switchToSignupForm() {
+  frontbox.classList.remove('moving');
+  toggleVisibilityAndClasses();
+}
+
+// Event listeners for the switches
+document.getElementById('switch1').addEventListener('click', switchToLoginForm);
+document.getElementById('switch2').addEventListener('click', switchToSignupForm);
+
+// Trigger the switches after time delays
+setTimeout(function() {
+  document.getElementById('switch1').click();
+}, 1000);
+
+setTimeout(function() {
+  document.getElementById('switch2').click();
+}, 3000);
+</script>
+
+<header class="header">
+
+</header>
+   
+</body>
+</html>
