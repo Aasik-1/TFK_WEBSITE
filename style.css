@@ -612,6 +612,10 @@ z-index: 5;
         width: 35%;
         max-width: 25rem;
     }
+    .feature {
+        width: 50%;
+        float: left;
+    }
 }
 /* --------------------footer-------------------- */
 .footer{
